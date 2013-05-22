@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/gadgetPhoneNumber"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="64dp" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="+"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:text="@string/stPhoneFullFormat"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editPhone"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/textView2"
+            android:ems="10"
+            android:inputType="numberSigned|phone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/freqTime"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+    </TextView>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/editTimes"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:inputType="number" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/strTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/strTimes"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/editMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:inputType="numberDecimal|numberSigned" >
+            </EditText>
+
+			<TableLayout
+			    android:id="@+id/tableLayout2"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+
+		       <TableRow
+		           android:id="@+id/tableRow21"
+		           android:layout_width="match_parent"
+		           android:layout_height="match_parent"
+		           android:layout_gravity="fill"
+		           android:baselineAligned="false" >
+
+		           <Spinner
+		               android:id="@+id/spinTimes"
+		               android:layout_width="wrap_content"
+		               android:layout_height="wrap_content"
+		               android:entries="@array/time_period"/>
+
+		           <TextView
+		               android:id="@+id/textView1"
+		               android:layout_width="wrap_content"
+		               android:layout_height="wrap_content"
+		               android:layout_gravity="center_vertical"
+		               android:layout_marginLeft="5dp"
+		               android:text="@string/strTime"
+		               android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	           </TableRow>
+            </TableLayout>
+           
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:text="@string/btnSave" >
+
+    </Button>
+
+</LinearLayout>

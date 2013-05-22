@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">"
+
+    <Button
+        android:id="@+id/btnStartup"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="177dp"
+        android:text="@string/btnStart" />
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnStartup"
+        android:layout_below="@+id/btnStartup"
+        android:layout_marginTop="38dp"
+        android:text="@string/btnSettings" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnStartup"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnStartup"
+        android:layout_marginTop="68dp"
+        android:text="@string/btnConnect" />
+
+    <TextView
+        android:id="@+id/txtReload"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnSettings"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"
+        android:text="@string/txtReload"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageButton
+        android:id="@+id/btnReload"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtReload"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/txtReload"
+        android:src="@android:drawable/ic_popup_sync"/>
+    
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnConnect"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txtError_noPhone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/errorColor" />
+
+    <ProgressBar
+        android:id="@+id/progressConnecting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtError"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
