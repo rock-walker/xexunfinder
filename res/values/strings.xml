@@ -31,7 +31,7 @@
 		<item>min</item>
 		<item>hour</item>
 	</string-array>
-	<string name="vldMax">Value must be in interval from 0 to 255</string>
+	<string name="vldMax">Value must be in range from 0 to 255</string>
 	<string name="GpsDisabled">GPS disabled. Would you like to enable it?</string>
 	<string name="GpsUserLocation">Defining of your position can take several minutes&#8230;</string>
 	<string name="GpsAUserLocation">A-GPS disabled (wireless networks).\nIs recommended to enable it,\nto speed up searching of your position</string>
