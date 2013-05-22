@@ -14,7 +14,7 @@
     <string name="mOk">ok!</string>
     <string name="mFail">fail</string>
 	<string name="GpsInited">Tracker connected successfully</string>
-	<string name="GpsConnectionFailed">Tracker connection failed. Tracker returned error &quot;failed&quot;.</string>
+	<string name="GpsConnectionFailed">Tracker connection failed. Tracker returned error &quot;fail&quot;.</string>
 	<string name="mGpsLat">lat:</string>
 	<string name="mGpsLong">long:</string>
 	<string name="mGpsSignal">Signal:</string>
