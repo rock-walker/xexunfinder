@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gadgetPhoneNumber">Номер сим-карты трэкера:</string>
+    <string name="app_name">Охотнику</string>
+    <string name="freqTime">Сколько запросов посылать в период времени?</string>
+    <string name="strTimes">Частота отправки СМС</string>
+    <string name="strTime">Период</string>
+    <string name="btnSave">Сохранить</string>
+    <string name="btnStart">На карту!</string>
+    <string name="btnSettings">Настройки</string>
+    <string name="adjustSettings">Настройки</string>
+    <string name="showMap">Карта</string>
+	<string name="GpsInited">Связь с трэкером установлена успешно</string>
+	<string name="GpsConnectionFailed">Связь с трэкером не установлена. Трэкер вернул ошибку begin FAIL.</string>
+	<string name="GpsBatLow">Слабый заряд батарей трэкера</string>
+	<string name="GpsSignalLow">Слабый сигнал от трэкера</string>
+	<string name="GpsCoordsRecvd">Координата получена</string>
+	<string name="GpsCoordsFailed">Координата не получена. Возможен слабый сигнал: вынесите трэкер под открытое небо</string>
+	<string name="stPhoneFullFormat">c кодом страны и оператора</string>
+	<string name="GpsSetted">Настройки успешно сохранены</string>
+	<string name="GpsStFailed">Настройки не установлены</string>
+	<string-array name="time_period">
+		<item>сек</item>
+		<item>мин</item>
+		<item>час</item>
+	</string-array>
+	<string name="vldMax">Значение должно быть в диапазоне от 0 до 255</string>
+	<string name="GpsDisabled">GPS отключен. Хотите его включить?</string>
+	<string name="GpsUserLocation">Определение вашей координаты может занять некоторое время&#8230;</string>
+	<string name="GpsAUserLocation">A-GPS отключен (Беспроводные сети).\nРекомендуется включить,\nчтобы ускорить поиск вашего местоположения</string>
+	<string name="mSmsNotDelievered">СМС не доставлено: возможно, трэкер отключен. \nПерезагрузите трэкер.</string>
+	<string name="infoNextCoord">ожидайте следующую координату через: %s</string>
+	<string name="infoWaitCoord">ожидайте получения СМС&#8230;</string>
+	<string name="iCoordNotReceived">Координата не получена. Будет отослана настроечная СМС. Ждите&#8230;</string>
+	<string name="btnConnect">Подключиться</string>
+	<string name="txtReload">Нажмите, если перегрузили трэкер</string>
+	<string name="txtError_noPhone">Не указан номер трэкера.\nЗайдите в \&quot;Настройки\&quot;</string>
+
+</resources>

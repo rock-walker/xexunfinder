@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gadgetPhoneNumber">Tracker phone number:</string>
+    <string name="app_name">XexunFinder</string>
+    <string name="freqTime">Amount of inqueries during time period</string>
+    <string name="strTimes">message sending frequency</string>
+    <string name="strTime">period</string>
+    <string name="btnSave">Save</string>
+    <string name="btnStart">Watch!</string>
+    <string name="btnSettings">Settings</string>
+    <string name="adjustSettings">Settings</string>
+    <string name="showMap">Map</string>
+    <string name="mBegin">begin</string>
+    <string name="mOk">ok!</string>
+    <string name="mFail">fail</string>
+	<string name="GpsInited">Tracker connected successfully</string>
+	<string name="GpsConnectionFailed">Tracker connection failed. Tracker returned error &quot;failed&quot;.</string>
+	<string name="mGpsLat">lat:</string>
+	<string name="mGpsLong">long:</string>
+	<string name="mGpsSignal">Signal:</string>
+	<string name="mGpsBat">bat:</string>
+	<string name="GpsBatLow">Battery low</string>
+	<string name="GpsSignalLow">Low signal from tracker</string>
+	<string name="GpsCoordsRecvd">The coordinate has received</string>
+	<string name="GpsCoordsFailed">The coordinate hasn\'t received. Low signal, probably - get tracker outdoor</string>
+	<string name="stPhoneFullFormat">with country code and cell phone operator</string>
+	<string name="GpsSetted">Settings saved successfully</string>
+	<string name="GpsStFailed">Settings hasn\'t adjusted</string>
+	<string-array name="time_period">
+		<item>sec</item>
+		<item>min</item>
+		<item>hour</item>
+	</string-array>
+	<string name="vldMax">Value must be in interval from 0 to 255</string>
+	<string name="GpsDisabled">GPS disabled. Would you like to enable it?</string>
+	<string name="GpsUserLocation">Defining of your position can take several minutes&#8230;</string>
+	<string name="GpsAUserLocation">A-GPS disabled (wireless networks).\nIs recommended to enable it,\nto speed up searching of your position</string>
+	<string name="mSmsNotDelievered">Messge is not delivered: Tracker is disabled, probably. \nRestart tracker.</string>
+	<string name="infoNextCoord">wait for next coordinate in: %s</string>
+	<string name="infoWaitCoord">wait for delivering of message&#8230;</string>
+	<string name="iCoordNotReceived">The coordinate is not deliviered. The adjusting message will be sent. Please wait&#8230;</string>
+	<string name="btnConnect">Connect</string>
+	<string name="txtReload">Press, if tracker has been reloaded</string>
+	<string name="txtError_noPhone">Tracker number has not setted.\nGo to the \&quot;Settings\&quot;</string>
+	<color name="errorColor">#FF0000</color>
+
+</resources>
