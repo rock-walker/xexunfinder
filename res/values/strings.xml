@@ -22,7 +22,7 @@
 	<string name="GpsBatLow">Battery low</string>
 	<string name="GpsSignalLow">Low signal from tracker</string>
 	<string name="GpsCoordsRecvd">The coordinate has received</string>
-	<string name="GpsCoordsFailed">The coordinate hasn\'t received. Low signal, probably - get tracker outdoor</string>
+	<string name="GpsCoordsFailed">The coordinate hasn\'t received. Low signal, probably - get tracker outdoor.</string>
 	<string name="stPhoneFullFormat">with country code and cell phone operator</string>
 	<string name="GpsSetted">Settings saved successfully</string>
 	<string name="GpsStFailed">Settings hasn\'t adjusted</string>
