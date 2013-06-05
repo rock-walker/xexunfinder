@@ -2,19 +2,19 @@ package mln.Forest;
 
 import android.content.SharedPreferences;
 
-public class Tracker102Settings extends TrackerSettings
+public class Tracker106Settings extends TrackerSettings
 								implements ISettings {
 
 	protected TrackerSettings baseTs;
 	
-	public Tracker102Settings() {
+	public Tracker106Settings() {
 		super();
 	}
 	
-	public Tracker102Settings(TrackerSettings settings){
+	public Tracker106Settings(TrackerSettings settings) {
 		baseTs = settings;
 	}
-	
+
 	public void setPhoneNumber(String _phoneNumber) {
 		if (baseTs != null)
 			baseTs.setPhoneNumber(_phoneNumber);
@@ -95,5 +95,4 @@ public class Tracker102Settings extends TrackerSettings
 		
 		return baseTs.obtain(sp);
 	}
-
 }

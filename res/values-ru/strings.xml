@@ -35,5 +35,6 @@
 	<string name="btnConnect">Подключиться</string>
 	<string name="txtReload">Нажмите, если перегрузили трэкер</string>
 	<string name="txtError_noPhone">Не указан номер трэкера.\nЗайдите в \&quot;Настройки\&quot;</string>
+	<string name="strTrackers">Модель трэкера</string>
 
 </resources>

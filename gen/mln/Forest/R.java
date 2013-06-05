@@ -10,6 +10,7 @@ package mln.Forest;
 public final class R {
     public static final class array {
         public static final int time_period=0x7f050000;
+        public static final int trackerModels=0x7f050001;
     }
     public static final class attr {
     }
@@ -25,32 +26,36 @@ public final class R {
         public static final int men=0x7f020005;
     }
     public static final class id {
-        public static final int btnConnect=0x7f080015;
-        public static final int btnReload=0x7f080017;
-        public static final int btnSave=0x7f080012;
-        public static final int btnSettings=0x7f080014;
-        public static final int btnStartup=0x7f080013;
-        public static final int editMin=0x7f08000b;
+        public static final int btnConnect=0x7f080019;
+        public static final int btnReload=0x7f08001b;
+        public static final int btnSave=0x7f080016;
+        public static final int btnSettings=0x7f080018;
+        public static final int btnStartup=0x7f080017;
+        public static final int editMin=0x7f08000f;
         public static final int editPhone=0x7f080005;
-        public static final int editTimes=0x7f080008;
+        public static final int editTimes=0x7f08000c;
         public static final int mapview=0x7f080001;
         public static final int nextCoord=0x7f080002;
-        public static final int progressConnecting=0x7f080019;
+        public static final int progressConnecting=0x7f08001d;
         public static final int rlayout=0x7f080000;
-        public static final int spinTimes=0x7f08000e;
-        public static final int strTimes=0x7f080009;
-        public static final int tableLayout1=0x7f080006;
-        public static final int tableLayout2=0x7f08000c;
-        public static final int tableRow1=0x7f080007;
-        public static final int tableRow2=0x7f08000a;
-        public static final int tableRow21=0x7f08000d;
-        public static final int tableRow3=0x7f080010;
-        public static final int tableRow4=0x7f080011;
-        public static final int textView1=0x7f08000f;
+        public static final int spinModels=0x7f080008;
+        public static final int spinTimes=0x7f080012;
+        public static final int strTimes=0x7f08000d;
+        public static final int tableLayout1=0x7f08000a;
+        public static final int tableLayout2=0x7f080010;
+        public static final int tableLayoutTm=0x7f080006;
+        public static final int tableRow1=0x7f08000b;
+        public static final int tableRow2=0x7f08000e;
+        public static final int tableRow21=0x7f080011;
+        public static final int tableRow3=0x7f080014;
+        public static final int tableRow4=0x7f080015;
+        public static final int tableRowTm=0x7f080007;
+        public static final int textView1=0x7f080013;
         public static final int textView2=0x7f080003;
         public static final int textView3=0x7f080004;
-        public static final int txtError=0x7f080018;
-        public static final int txtReload=0x7f080016;
+        public static final int textViewTm=0x7f080009;
+        public static final int txtError=0x7f08001c;
+        public static final int txtReload=0x7f08001a;
     }
     public static final class layout {
         public static final int map=0x7f030000;
@@ -93,6 +98,7 @@ public final class R {
         public static final int stPhoneFullFormat=0x7f040017;
         public static final int strTime=0x7f040004;
         public static final int strTimes=0x7f040003;
+        public static final int strTrackers=0x7f040025;
         public static final int txtError_noPhone=0x7f040024;
         public static final int txtReload=0x7f040023;
         public static final int vldMax=0x7f04001a;

@@ -47,6 +47,35 @@
 
     </RelativeLayout>
 
+	<TableLayout
+	    android:id="@+id/tableLayoutTm"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+
+       <TableRow
+           android:id="@+id/tableRowTm"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_gravity="fill"
+           android:baselineAligned="false" >
+
+          <Spinner
+      			android:id="@+id/spinModels"
+      			android:layout_width="match_parent"
+     				android:layout_height="wrap_content"
+      			android:entries="@array/trackerModels" />
+
+           <TextView
+               android:id="@+id/textViewTm"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:layout_marginLeft="5dp"
+               android:text="@string/strTrackers"
+               android:textAppearance="?android:attr/textAppearanceMedium" />
+
+          </TableRow>
+          </TableLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

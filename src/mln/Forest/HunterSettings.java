@@ -1,5 +1,6 @@
 package mln.Forest;
 
+import mln.Forest.TrackerSettings.TrackerModels;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -17,14 +18,16 @@ public class HunterSettings extends Activity {
 	private int _freqTime;
 	private int _freqMin;
 	private String _freqVal;
+	private TrackerModels _trackerModel;
 	
 	//def controls
 	private EditText edPhone;
 	private EditText edFreqTime;
 	private EditText edFreqMin;
 	private Spinner  spinTimes;
+	private Spinner  spinModels;
 	
-	private Tracker102Settings t102Settings;
+	private TrackerSettings trackerSettings;
 	
 	private Button btnSave;
 	
@@ -40,19 +43,15 @@ public class HunterSettings extends Activity {
         edFreqMin = (EditText)findViewById(R.id.editMin);
         edFreqMin.setFilters(new InputFilter[] { new ValidatorMinMax(0, 255)});
         spinTimes = (Spinner)findViewById(R.id.spinTimes);
+        spinModels = (Spinner)findViewById(R.id.spinModels);
         btnSave = (Button)findViewById(R.id.btnSave);
         
-        t102Settings = (Tracker102Settings)HunterDogActivity.currSettings;
         
-        edPhone.setText(t102Settings.getPhoneNumber());
-        edFreqTime.setText(String.valueOf(t102Settings.getFrequencyTimes()));
-        edFreqMin.setText(String.valueOf(t102Settings.getFrequencyMins()));
+        trackerSettings = (TrackerSettings)HunterDogActivity.currSettings;
         
-        //START: init spinner
-        /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, 
-        		R.array.time_period, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinTimes.setAdapter(adapter);*/
+        edPhone.setText(trackerSettings.getPhoneNumber());
+        edFreqTime.setText(String.valueOf(trackerSettings.getFrequencyTimes()));
+        edFreqMin.setText(String.valueOf(trackerSettings.getFrequencyMins()));
         
         class TimesSelectedListener implements OnItemSelectedListener{
 
@@ -79,7 +78,9 @@ public class HunterSettings extends Activity {
 			}
         	
         };
-        String time = t102Settings.getFrequencyVal();
+        
+        //adjust time freq
+        String time = trackerSettings.getFrequencyVal();
         int position = 0;
         if (time.equals("m"))
         	position = 1;
@@ -89,7 +90,33 @@ public class HunterSettings extends Activity {
         spinTimes.setSelection(position);
         spinTimes.setOnItemSelectedListener(new TimesSelectedListener());
         
-        //END: init spinner
+        //adjust model
+        TrackerModels model = trackerSettings.getTrackerModel();
+        class ModelsSelectedListener implements OnItemSelectedListener{
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View arg1,
+					int position, long arg3) {
+				TrackerModels model = TrackerModels.XEXUN102;
+				switch (position)
+				{
+					case 1:
+						model = TrackerModels.XEXUN106;
+						break;
+				};
+				_trackerModel = model;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+        	
+        };
+        spinModels.setSelection(TrackerModels.toInteger(model));
+        spinModels.setOnItemSelectedListener(new ModelsSelectedListener());
+        
         btnSave.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -105,14 +132,18 @@ public class HunterSettings extends Activity {
 		_freqTime = Integer.parseInt(edFreqTime.getText().toString());
 		_freqMin = Integer.parseInt(edFreqMin.getText().toString());
 		
-		t102Settings.isAutoTrackChanged = false;
-		t102Settings.setPhoneNumber(_phoneNumber);
-		t102Settings.setFrequencyTimes(_freqTime);
-		t102Settings.setFrequencyMins(_freqMin);
-		t102Settings.setFrequencyVal(_freqVal);
 		
-		if (!HunterDogActivity.currSettings.Save())
+		trackerSettings.isAutoTrackChanged = false;
+		trackerSettings.setPhoneNumber(_phoneNumber);
+		trackerSettings.setFrequencyTimes(_freqTime);
+		trackerSettings.setFrequencyMins(_freqMin);
+		trackerSettings.setFrequencyVal(_freqVal);
+		trackerSettings.setTrackerModel(_trackerModel);
+		
+		if (!HunterDogActivity.currSettings.save())
 			;//show error message;
+		else
+			HunterDogActivity.applySettings(_trackerModel, (TrackerSettings)HunterDogActivity.currSettings);
 	}
 	
 	@Override

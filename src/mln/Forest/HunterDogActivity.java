@@ -1,5 +1,6 @@
 package mln.Forest;
 
+import mln.Forest.TrackerSettings.TrackerModels;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -66,9 +67,7 @@ public class HunterDogActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				iMessager = new Tracker102Messager();
-				
-				if (((Tracker102Settings)currSettings).getPhoneNumber().length() > 0)
+					if (currSettings.getPhoneNumber().length() > 0)
 		        	initTracker();
 		        else
 		        	mTxtError.setVisibility(View.VISIBLE);	
@@ -111,7 +110,7 @@ public class HunterDogActivity extends Activity {
     	super.onResume();
     	
     	if (currSettings != null &&
-    			((Tracker102Settings)currSettings).getPhoneNumber().length() > 0)
+    			currSettings.getPhoneNumber().length() > 0)
     	{
     		mTxtError.setVisibility(View.GONE);
     		mConnect.setEnabled(true);
@@ -132,11 +131,15 @@ public class HunterDogActivity extends Activity {
     
     private void initSettings()
     {
-    	currSettings = Tracker102Settings.getInstance();
-    	if (!HunterDogActivity.currSettings.Obtain(getSharedPreferences(APP_PREFERENCES, 0)))
+    	TrackerSettings ts = TrackerSettings.getInstance();
+    	if (!ts.obtain(getSharedPreferences(APP_PREFERENCES, 0)))
     		Toast.makeText(getBaseContext(), 
                     "Obtaining of preferences has been failed", 
                     Toast.LENGTH_SHORT).show();
+    	else
+    	{
+    		applySettings(ts.getTrackerModel(), ts);
+    	}
     }
     
     private void initTracker(){
@@ -200,5 +203,22 @@ public class HunterDogActivity extends Activity {
 	   PackageInfo pi = pm.getPackageInfo(getPackageName(), 0);
 
 	   return ((pi.applicationInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0);
+	}
+
+	public static void applySettings(TrackerModels _trackerModel, TrackerSettings ts) {
+		switch (_trackerModel)
+		{
+			case XEXUN102:
+				iMessager = new Tracker102Messager();
+				currSettings = new Tracker102Settings(ts);
+				break;
+			case XEXUN106:
+				iMessager = new Tracker106Messager();
+				currSettings = new Tracker106Settings(ts);
+				break;
+			default:
+				iMessager = new Tracker102Messager();
+				currSettings = new Tracker102Settings(ts);
+		}
 	}
 }

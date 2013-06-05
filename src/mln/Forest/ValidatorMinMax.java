@@ -2,7 +2,6 @@ package mln.Forest;
 
 import android.text.InputFilter;
 import android.text.Spanned;
-import android.widget.Toast;
 
 public class ValidatorMinMax implements InputFilter {
 

@@ -43,5 +43,10 @@
 	<string name="txtReload">Press, if tracker has been reloaded</string>
 	<string name="txtError_noPhone">Tracker number has not setted.\nGo to the \&quot;Settings\&quot;</string>
 	<color name="errorColor">#FF0000</color>
+	<string-array name="trackerModels">
+		<item >Xexun TK 102</item>
+		<item >Xexun TK 106</item>
+	</string-array>
+	<string name="strTrackers">Tracker model</string>
 
 </resources>
